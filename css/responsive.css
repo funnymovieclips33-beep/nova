@@ -1,0 +1,455 @@
+/* ===================================================================
+   NOVA · responsive.css
+   Mobile-first breakpoint adaptations
+   Target widths: 390 / 768 / 1024 / 1440 / 1920+
+   =================================================================== */
+
+/* ═══════════════════════════════════════════════════════════════════
+   ≤ 1024px — Tablet & small laptops
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  :root {
+    --section-spacing: 110px;
+  }
+
+  /* Hero */
+  .hero__title {
+    font-size: clamp(2.8rem, 8vw, 5.5rem);
+  }
+
+  /* About */
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+
+  .about__header {
+    position: static;
+  }
+
+  .about__stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  /* Philosophy */
+  .philosophy__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  /* Live */
+  .live__stage {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+
+  /* Gallery */
+  .gallery__grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 160px;
+  }
+
+  .gallery__item--wide {
+    grid-column: span 4;
+  }
+
+  .gallery__item,
+  .gallery__item--tall {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  /* Palette */
+  .palette {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  /* Amenities */
+  .amenity-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer */
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ≤ 880px — Show mobile menu, hide desktop nav
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 880px) {
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ≤ 768px — Tablet portrait / large phone
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 24px;
+    --section-spacing: 90px;
+  }
+
+  /* Hide custom cursor */
+  .nova-cursor { display: none !important; }
+
+  /* Hero */
+  .hero {
+    padding: 130px var(--container-padding) var(--space-7);
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .hero__title {
+    font-size: clamp(3rem, 12vw, 5rem);
+    line-height: 0.95;
+  }
+
+  .hero__title-line--accent {
+    padding-left: 32px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__actions .btn {
+    justify-content: center;
+  }
+
+  .hero__meta {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+  }
+
+  .hero__meta-item:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+  /* About */
+  .about__lede {
+    font-size: 1.3rem;
+  }
+
+  .about__stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+    padding-block: var(--space-6);
+  }
+
+  .stat__value {
+    font-size: 2.2rem;
+  }
+
+  .about__quote {
+    padding: var(--space-5);
+    padding-left: var(--space-6);
+    font-size: 1.2rem;
+  }
+
+  /* Philosophy */
+  .pillar {
+    padding: var(--space-5);
+  }
+
+  .pillar__title {
+    font-size: 1.8rem;
+  }
+
+  .compare {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    padding: var(--space-5);
+  }
+
+  .compare__divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-gold-faint) 50%, transparent);
+  }
+
+  .compare__divider::after {
+    content: '↓';
+    padding-inline: var(--space-3);
+    background: var(--color-charcoal);
+  }
+
+  /* Live */
+  .live__viewport {
+    aspect-ratio: 4 / 3;
+  }
+
+  .live__ui-coords {
+    display: none;
+  }
+
+  .live__sign-letters {
+    font-size: 1.4rem;
+  }
+
+  /* Lifestyle */
+  .lifestyle__split {
+    grid-template-columns: 1fr;
+  }
+
+  .mode {
+    min-height: 480px;
+    padding: var(--space-6);
+  }
+
+  .mode__title {
+    font-size: clamp(2.4rem, 9vw, 3.6rem);
+  }
+
+  /* Gallery */
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 220px;
+    gap: var(--space-3);
+  }
+
+  .gallery__item,
+  .gallery__item--tall,
+  .gallery__item--wide {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .gallery__item--tall {
+    grid-row: span 1;
+  }
+
+  /* Always-visible captions on touch */
+  .gallery__caption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Palette */
+  .palette {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .palette__swatch {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Amenities */
+  .amenity-list {
+    grid-template-columns: 1fr;
+  }
+
+  .amenity {
+    padding-left: 0 !important;
+  }
+
+  /* CTA */
+  .cta {
+    padding-block: 100px;
+  }
+
+  .cta__title {
+    font-size: clamp(2.8rem, 11vw, 4.5rem);
+  }
+
+  .cta__form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cta__form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta__form-actions .btn {
+    justify-content: center;
+  }
+
+  .cta__signature {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  /* Footer */
+  .footer {
+    padding-block: var(--space-7) 0;
+  }
+
+  .footer__nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  .footer__bottom {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    text-align: center;
+  }
+
+  .footer__legal {
+    justify-content: center;
+  }
+
+  /* Smaller locate pill on tablets so it fits inside the watermark */
+  .footer__locate {
+    padding: 0.7rem 1.1rem 0.7rem 1.2rem;
+    gap: 0.6rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.24em;
+  }
+  .footer__locate-label { font-size: 0.85rem; }
+
+  /* Section index — push down to avoid header overlap */
+  .section__index {
+    top: var(--space-5);
+    right: var(--container-padding);
+    font-size: 0.6rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ≤ 480px — Mobile (iPhone 14, Pixel, etc — 390px target)
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 20px;
+    --section-spacing: 80px;
+  }
+
+  /* Header */
+  /* Hero — tighter on small screens */
+  .hero {
+    padding: 110px var(--container-padding) var(--space-6);
+  }
+
+  .hero__eyebrow {
+    font-size: 0.58rem;
+    margin-bottom: var(--space-5);
+  }
+
+  .hero__title {
+    font-size: clamp(2.6rem, 13vw, 3.6rem);
+  }
+
+  .hero__title-line--accent {
+    padding-left: 24px;
+  }
+
+  .hero__lede {
+    font-size: 1rem;
+  }
+
+  /* About */
+  .stat__value {
+    font-size: 1.8rem;
+  }
+
+  /* Philosophy / pillars */
+  .pillar {
+    padding: var(--space-5);
+    gap: var(--space-4);
+  }
+
+  /* Live */
+  .live__viewport {
+    aspect-ratio: 3 / 4;
+  }
+
+  /* Lifestyle */
+  .mode {
+    min-height: 440px;
+    padding: var(--space-5);
+  }
+
+  .mode__quote {
+    font-size: 1rem;
+  }
+
+  /* Gallery */
+  .gallery__grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 280px;
+  }
+
+  .gallery__item,
+  .gallery__item--tall,
+  .gallery__item--wide {
+    grid-column: span 1;
+  }
+
+  /* Palette */
+  .palette {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CTA */
+  .cta__pill {
+    font-size: 0.55rem;
+    padding: 8px 14px;
+  }
+
+  .cta__title {
+    font-size: clamp(2.4rem, 14vw, 3.4rem);
+  }
+
+  /* Footer */
+  .footer__nav {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__massive {
+    font-size: 22vw;
+  }
+
+  .footer__locate {
+    padding: 0.6rem 0.9rem 0.6rem 1rem;
+    gap: 0.5rem;
+    font-size: 0.52rem;
+    letter-spacing: 0.22em;
+  }
+  .footer__locate-label { font-size: 0.76rem; }
+  .footer__locate-eyebrow { padding-right: 0.6rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ≥ 1440px — Large desktops
+   ═══════════════════════════════════════════════════════════════════ */
+@media (min-width: 1440px) {
+  :root {
+    --container-padding: 56px;
+    --section-spacing: 180px;
+  }
+
+  .hero {
+    padding-inline: 56px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ≥ 1920px — Ultra-wide displays
+   ═══════════════════════════════════════════════════════════════════ */
+@media (min-width: 1920px) {
+  :root {
+    --container-padding: 80px;
+    --section-spacing: 220px;
+    --fs-h1: clamp(7rem, 8vw, 10rem);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Coarse pointers (touch) — auto-hide custom cursor
+   ═══════════════════════════════════════════════════════════════════ */
+@media (hover: none), (pointer: coarse) {
+  .nova-cursor { display: none !important; }
+  body.has-custom-cursor,
+  body.has-custom-cursor * {
+    cursor: auto !important;
+  }
+}

@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="NOVA Bali — Luxury residences in Ungasan. Built in public. Radical transparency in real estate. Observe the birth of a project in real time." />
+  <meta name="theme-color" content="#0A0908" />
+
+  <title>NOVA · Loft Residences · Ungasan, Bali</title>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Typography: Editorial serif + clean sans + technical mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Jost:wght@200;300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets (modular, WordPress-ready) -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="nova-body is-loading">
+
+  <!-- ═══════════════════════════════════════════════════════
+       PRELOADER · cinematic intro overlay
+       Removes itself after window.load + minimum display time.
+       ═══════════════════════════════════════════════════════ -->
+  <div class="nova-preloader" data-preloader>
+    <div class="nova-preloader__inner">
+      <div class="nova-preloader__brand">
+        <span class="nova-preloader__mark">NOV<span class="nova-preloader__accent">A</span> LOFT</span>
+        <span class="nova-preloader__rule" aria-hidden="true"></span>
+        <span class="nova-preloader__sub">Ungasan, Bali · 2026</span>
+      </div>
+
+      <div class="nova-preloader__panel">
+        <div class="nova-preloader__progress" aria-hidden="true">
+          <span class="nova-preloader__bar" data-preloader-bar></span>
+        </div>
+        <div class="nova-preloader__meta">
+          <span class="nova-preloader__label">Initializing atmosphere</span>
+          <span class="nova-preloader__percent" data-preloader-percent>0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom cursor (desktop only — JS gates it) -->
+  <div class="nova-cursor" aria-hidden="true">
+    <div class="nova-cursor__dot"></div>
+    <div class="nova-cursor__ring"></div>
+  </div>
+
+  <!-- Scroll progress indicator -->
+  <div class="nova-progress" aria-hidden="true">
+    <div class="nova-progress__bar"></div>
+  </div>
+
+  <!-- Grain overlay for cinematic texture -->
+  <div class="nova-grain" aria-hidden="true"></div>
+
+  <main class="nova-main">
+
+    <!-- ═══════════════════════════════════════════════════════
+         SCREEN 01 · HERO  (unchanged)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" data-section="hero" data-mode="sunset">
+      <div class="hero__stage" aria-hidden="true">
+        <picture class="hero__render hero__render--morning" data-render="morning">
+          <img src="images/hero/morning.jpg" alt="" decoding="async" fetchpriority="low">
+        </picture>
+        <picture class="hero__render hero__render--day" data-render="day">
+          <img src="images/hero/day.jpg" alt="" decoding="async" fetchpriority="low">
+        </picture>
+        <picture class="hero__render hero__render--sunset is-current" data-render="sunset">
+          <img src="images/hero/sunset.jpg" alt="" decoding="async" fetchpriority="high">
+        </picture>
+        <picture class="hero__render hero__render--night" data-render="night">
+          <img src="images/hero/night.jpg" alt="" decoding="async" fetchpriority="low">
+        </picture>
+
+        <div class="hero__retouch" aria-hidden="true"></div>
+        <div class="hero__atmosphere"></div>
+        <div class="hero__vignette"></div>
+        <div class="hero__grain"></div>
+      </div>
+
+      <header class="hero__id">
+        <span class="hero__id-mark">NOVA LOFT</span>
+        <span class="hero__id-line">Ungasan, Bali</span>
+      </header>
+
+      <aside class="hero__observatory" aria-label="Live observatory">
+        <span class="hero__obs-item hero__obs-item--live">
+          <span class="hero__obs-pulse" aria-hidden="true"></span>
+          LIVE
+        </span>
+        <span class="hero__obs-sep">·</span>
+        <span class="hero__obs-item" data-obs-time>21:14 WITA</span>
+        <span class="hero__obs-sep">·</span>
+        <span class="hero__obs-item" data-obs-temp>28°C</span>
+        <span class="hero__obs-sep">·</span>
+        <span class="hero__obs-item" data-obs-air>Humid air</span>
+        <span class="hero__obs-sep">·</span>
+        <span class="hero__obs-item hero__obs-item--status" data-obs-status>Golden hour</span>
+      </aside>
+
+      <div class="hero__headline">
+        <h1 class="hero__headline-line">
+          The rhythm of Bali,<br>
+          designed for <em>modern living</em>.
+        </h1>
+      </div>
+
+      <div class="hero__statement" aria-live="polite">
+        <span class="hero__statement-eyebrow" data-statement-eyebrow>03 — Golden Hour</span>
+        <p class="hero__statement-line" data-statement-line>
+          Warm concrete, soft reflections, and the city slowing down.
+        </p>
+      </div>
+
+      <nav class="hero__modes" aria-label="Time of day">
+        <ul class="hero__modes-list" role="tablist">
+          <li><button type="button" class="hero__mode" role="tab" aria-selected="false" data-mode-btn="morning" data-cursor-hover>
+            <span class="hero__mode-num">01</span><span class="hero__mode-name">Morning</span>
+          </button></li>
+          <li><button type="button" class="hero__mode" role="tab" aria-selected="false" data-mode-btn="day"     data-cursor-hover>
+            <span class="hero__mode-num">02</span><span class="hero__mode-name">Daylight</span>
+          </button></li>
+          <li><button type="button" class="hero__mode is-active" role="tab" aria-selected="true" data-mode-btn="sunset"  data-cursor-hover>
+            <span class="hero__mode-num">03</span><span class="hero__mode-name">Sunset</span>
+          </button></li>
+          <li><button type="button" class="hero__mode" role="tab" aria-selected="false" data-mode-btn="night"   data-cursor-hover>
+            <span class="hero__mode-num">04</span><span class="hero__mode-name">After Dark</span>
+          </button></li>
+        </ul>
+      </nav>
+
+      <a class="hero__scroll" href="#reality" aria-label="Continue to next scene" data-cursor-hover>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SCREEN 02 · REALITY
+         Drone documentary view of the under-construction site.
+         Four corners of editorial copy + observatory + time-of-day
+         switching that mirrors the hero (auto WITA + manual override).
+         ═══════════════════════════════════════════════════════ -->
+    <section class="reality" id="reality" data-section="reality" data-mode="sunset">
+
+      <!-- Documentary stage: 4 crossfading renders, one per time of day -->
+      <div class="reality__stage" aria-hidden="true">
+        <picture class="reality__render reality__render--morning" data-render="morning">
+          <img src="images/reality/morning.jpg" alt="" decoding="async" fetchpriority="low">
+        </picture>
+        <picture class="reality__render reality__render--day" data-render="day">
+          <img src="images/reality/day.jpg" alt="" decoding="async" fetchpriority="low">
+        </picture>
+        <picture class="reality__render reality__render--sunset" data-render="sunset">
+          <img src="images/reality/sunset.jpg" alt="" decoding="async" fetchpriority="high">
+        </picture>
+        <picture class="reality__render reality__render--night" data-render="night">
+          <img src="images/reality/night.jpg" alt="" decoding="async" fetchpriority="low">
+        </picture>
+
+        <div class="reality__grade"></div>
+        <div class="reality__vignette"></div>
+        <div class="reality__grain"></div>
+      </div>
+
+      <!-- Top-left: editorial promise + gold rule -->
+      <header class="reality__intro">
+        <span class="reality__intro-text">Reality, not promises.</span>
+        <span class="reality__intro-rule" aria-hidden="true"></span>
+      </header>
+
+      <!-- Top-right: subtle "updated" pulse -->
+      <aside class="reality__pulse" aria-label="Last update">
+        <span class="reality__pulse-dot" aria-hidden="true"></span>
+        <span class="reality__pulse-text" data-reality-date>Updated today</span>
+      </aside>
+
+      <!-- Bottom-left: editorial statement + CTA -->
+      <div class="reality__statement">
+        <h2 class="reality__headline">
+          <span class="reality__headline-line" data-reveal>A reality</span>
+          <span class="reality__headline-line reality__headline-line--accent" data-reveal data-reveal-delay="120"><em>in&nbsp;progress.</em></span>
+        </h2>
+        <span class="reality__headline-rule" aria-hidden="true" data-reveal data-reveal-delay="260"></span>
+        <p class="reality__lede" data-reveal data-reveal-delay="320">
+          Live construction from Ungasan, Bali.<br>
+          Updated daily. Observed publicly.
+        </p>
+        <a href="#" class="reality__cta" data-cursor-hover>
+          <span class="reality__cta-text">View live feed</span>
+          <span class="reality__cta-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <!-- Bottom-right: observatory progress -->
+      <div class="reality__observatory" aria-label="Construction progress">
+
+        <span class="reality__obs-eyebrow" data-reveal>Construction progress</span>
+
+        <div class="reality__obs-percent" data-reveal data-reveal-delay="100">
+          <span class="reality__obs-num" data-reality-percent>68</span><span class="reality__obs-unit">%</span>
+        </div>
+
+        <div class="reality__obs-bar" data-reveal data-reveal-delay="200" aria-hidden="true">
+          <span class="reality__obs-bar-fill" style="--fill: 68%"></span>
+        </div>
+
+        <ol class="reality__obs-list" data-reveal data-reveal-delay="320">
+          <li class="reality__obs-row reality__obs-row--done">
+            <span class="reality__obs-row-label">
+              <span class="reality__obs-row-dot" aria-hidden="true"></span>
+              Foundation
+            </span>
+            <span class="reality__obs-row-value">
+              <span class="reality__obs-row-vdot" aria-hidden="true"></span>
+              Complete
+            </span>
+          </li>
+          <li class="reality__obs-row reality__obs-row--active">
+            <span class="reality__obs-row-label">
+              <span class="reality__obs-row-dot" aria-hidden="true"></span>
+              Structure
+            </span>
+            <span class="reality__obs-row-value">In progress</span>
+          </li>
+          <li class="reality__obs-row">
+            <span class="reality__obs-row-label">
+              <span class="reality__obs-row-dot" aria-hidden="true"></span>
+              Amenities
+            </span>
+            <span class="reality__obs-row-value">Next phase</span>
+          </li>
+        </ol>
+
+        <div class="reality__obs-status">
+          <span class="reality__obs-status-key">Status</span>
+          <span class="reality__obs-status-val">
+            <span class="reality__obs-status-pulse" aria-hidden="true"></span>
+            <span>Live · Observed publicly</span>
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Time-of-day selector (auto-driven by WITA, manual override) -->
+      <nav class="reality__modes" aria-label="Time of day">
+        <ul class="reality__modes-list" role="tablist">
+          <li><button type="button" class="reality__mode" role="tab" aria-selected="false" data-r-mode-btn="morning" data-cursor-hover>
+            <span class="reality__mode-num">01</span><span class="reality__mode-name">Morning</span>
+          </button></li>
+          <li><button type="button" class="reality__mode" role="tab" aria-selected="false" data-r-mode-btn="day"     data-cursor-hover>
+            <span class="reality__mode-num">02</span><span class="reality__mode-name">Daylight</span>
+          </button></li>
+          <li><button type="button" class="reality__mode is-active" role="tab" aria-selected="true" data-r-mode-btn="sunset"  data-cursor-hover>
+            <span class="reality__mode-num">03</span><span class="reality__mode-name">Sunset</span>
+          </button></li>
+          <li><button type="button" class="reality__mode" role="tab" aria-selected="false" data-r-mode-btn="night"   data-cursor-hover>
+            <span class="reality__mode-num">04</span><span class="reality__mode-name">After Dark</span>
+          </button></li>
+        </ul>
+      </nav>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SCREEN 03 · APARTMENT TYPES
+         Two layouts (27m² / 35m²) with tab switching. Same theme
+         system as CTA (light by day, dark at night, sync via
+         nova:mode events, manual override via .theme-toggle).
+         ═══════════════════════════════════════════════════════ -->
+    <section class="apartments" id="apartments" data-section="apartments" data-type="27">
+
+      <!-- ── LEFT · interior photo + headline overlay ──────────── -->
+      <div class="apartments__photo-col">
+        <picture class="apartments__photo" aria-hidden="true">
+          <img class="apartments__photo-img apartments__photo-img--night"
+               src="images/apartments/interior-night.jpg"
+               alt="" decoding="async" loading="lazy">
+          <img class="apartments__photo-img apartments__photo-img--day"
+               src="images/apartments/interior-day.jpg"
+               alt="" decoding="async" loading="lazy">
+          <div class="apartments__photo-grade"></div>
+        </picture>
+
+        <div class="apartments__meta">
+          <span class="apartments__meta-num">03</span>
+          <span class="apartments__meta-rule" aria-hidden="true"></span>
+          <span class="apartments__meta-label">Apartment Types</span>
+        </div>
+
+        <div class="apartments__overlay">
+          <h2 class="apartments__title">
+            Two layouts.<br>One <em>standard</em> of living.
+          </h2>
+          <p class="apartments__lede">
+            Carefully planned spaces that balance comfort, function
+            and island living.
+          </p>
+        </div>
+      </div>
+
+      <!-- ── MIDDLE · tabs + active type details ───────────────── -->
+      <div class="apartments__info-col">
+
+        <nav class="apartments__tabs" aria-label="Choose apartment type">
+          <button type="button" class="apartments__tab" data-type-btn="27" data-cursor-hover>
+            <span class="apartments__tab-eyebrow">Type</span>
+            <span class="apartments__tab-value">27M²</span>
+          </button>
+          <button type="button" class="apartments__tab" data-type-btn="35" data-cursor-hover>
+            <span class="apartments__tab-eyebrow">Type</span>
+            <span class="apartments__tab-value">35M²</span>
+          </button>
+        </nav>
+
+        <!-- ── Panel: 27m² ── -->
+        <article class="apartments__panel" data-type-panel="27" data-reveal data-reveal-delay="200">
+          <span class="apartments__panel-eyebrow">Type</span>
+          <span class="apartments__panel-value">27M<sup>2</sup></span>
+          <p class="apartments__panel-lede">
+            Efficient and refined.<br>Everything you need, nothing you don't.
+          </p>
+          <ul class="apartments__features">
+            <li class="apartments__feature">
+              <span class="apartments__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16"/>
+                  <path d="M8 4v16M16 4v16M4 8h16M4 16h16"/>
+                </svg>
+              </span>
+              <div class="apartments__feature-text">
+                <span class="apartments__feature-primary">27 m<sup>2</sup></span>
+                <span class="apartments__feature-secondary">Total Size</span>
+              </div>
+            </li>
+            <li class="apartments__feature">
+              <span class="apartments__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 18V9a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v9"/>
+                  <path d="M3 14h18M3 18v2M21 18v2"/>
+                  <rect x="7" y="9" width="10" height="4" rx="1"/>
+                </svg>
+              </span>
+              <div class="apartments__feature-text">
+                <span class="apartments__feature-primary">Studio</span>
+                <span class="apartments__feature-secondary">1 Bedroom</span>
+              </div>
+            </li>
+            <li class="apartments__feature">
+              <span class="apartments__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22V12"/>
+                  <path d="M5 12c0-4 3-7 7-7s7 3 7 7c0 3-2 5-4 6"/>
+                  <path d="M12 12c0-2 1-4 3-5M12 12c0-2-1-4-3-5"/>
+                </svg>
+              </span>
+              <div class="apartments__feature-text">
+                <span class="apartments__feature-primary">Courtyard View</span>
+                <span class="apartments__feature-secondary">Peaceful Surroundings</span>
+              </div>
+            </li>
+            <li class="apartments__feature">
+              <span class="apartments__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="1"/>
+                  <path d="M3 9h18M9 3v6M15 3v6"/>
+                  <circle cx="7" cy="15" r="1.5"/>
+                  <circle cx="12" cy="15" r="1.5"/>
+                  <circle cx="17" cy="15" r="1.5"/>
+                </svg>
+              </span>
+              <div class="apartments__feature-text">
+                <span class="apartments__feature-primary">Private Kitchen</span>
+                <span class="apartments__feature-secondary">Fully Equipped</span>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <!-- ── Panel: 35m² ── -->
+        <article class="apartments__panel" data-type-panel="35" data-reveal data-reveal-delay="200">
+          <span class="apartments__panel-eyebrow">Type</span>
+          <span class="apartments__panel-value">35M<sup>2</sup></span>
+          <p class="apartments__panel-lede">
+            Spacious and serene.<br>Room to host, room to retreat.
+          </p>
+          <ul class="apartments__features">
+            <li class="apartments__feature">
+              <span class="apartments__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16"/>
+                  <path d="M8 4v16M16 4v16M4 8h16M4 16h16"/>
+                </svg>
+              </span>
+              <div class="apartments__feature-text">
+                <span class="apartments__feature-primary">35 m<sup>2</sup></span>
+                <span class="apartments__feature-secondary">Total Size</span>
+              </div>
+            </li>
+            <li class="apartments__feature">
+              <span class="apartments__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 18V9a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v9"/>
+                  <path d="M3 14h18M3 18v2M21 18v2"/>
+                  <rect x="7" y="9" width="10" height="4" rx="1"/>
+                </svg>
+              </span>
+              <div class="apartments__feature-text">
+                <span class="apartments__feature-primary">1 Bedroom</span>
+                <span class="apartments__feature-secondary">Separate Living Space</span>
+              </div>
+            </li>
+            <li class="apartments__feature">
+              <span class="apartments__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22V12"/>
+                  <path d="M5 12c0-4 3-7 7-7s7 3 7 7c0 3-2 5-4 6"/>
+                  <path d="M12 12c0-2 1-4 3-5M12 12c0-2-1-4-3-5"/>
+                </svg>
+              </span>
+              <div class="apartments__feature-text">
+                <span class="apartments__feature-primary">Courtyard View</span>
+                <span class="apartments__feature-secondary">Dual-Aspect Windows</span>
+              </div>
+            </li>
+            <li class="apartments__feature">
+              <span class="apartments__feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="1"/>
+                  <path d="M3 9h18M9 3v6M15 3v6"/>
+                  <circle cx="7" cy="15" r="1.5"/>
+                  <circle cx="12" cy="15" r="1.5"/>
+                  <circle cx="17" cy="15" r="1.5"/>
+                </svg>
+              </span>
+              <div class="apartments__feature-text">
+                <span class="apartments__feature-primary">Open Kitchen</span>
+                <span class="apartments__feature-secondary">Island + Breakfast Bar</span>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+      <!-- ── RIGHT · floor plan ─────────────────────────────────── -->
+      <div class="apartments__plan-col">
+        <div class="apartments__plan" data-plan="27">
+          <img src="images/apartments/plan-27.jpg" alt="27 square meter studio floor plan" loading="lazy">
+        </div>
+        <div class="apartments__plan" data-plan="35">
+          <img src="images/apartments/plan-35.jpg" alt="35 square meter one-bedroom floor plan" loading="lazy">
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SCREEN 04 · IMMERSIVE EXPERIENCE · 3D Walk-through
+         Two-column layout: info (left) + viewer (right).
+         Room tabs are scoped per apartment type — switching the type
+         shows that type's rooms only and loads its first room.
+         ═══════════════════════════════════════════════════════ -->
+    <section class="tour" id="tour" data-section="tour"
+             data-active-type="35" data-active-room="living">
+
+      <!-- ── Top meta (left) ──────────────────────────────────── -->
+      <div class="tour__meta">
+        <span class="tour__meta-num">04</span>
+        <span class="tour__meta-rule" aria-hidden="true"></span>
+        <span class="tour__meta-label">Immersive Experience</span>
+      </div>
+
+      <!-- ── Top type-tabs (centered above viewer) ───────────── -->
+      <nav class="tour__type-tabs" aria-label="Choose apartment type">
+        <button type="button" class="tour__type-tab" data-tour-type="27" data-cursor-hover>
+          <span class="tour__type-tab-value">27M²</span>
+        </button>
+        <button type="button" class="tour__type-tab" data-tour-type="35" data-cursor-hover>
+          <span class="tour__type-tab-value">35M²</span>
+        </button>
+      </nav>
+
+      <!-- ── LEFT · title + lede ─────────────────────────────── -->
+      <div class="tour__info-col">
+        <div class="tour__info">
+          <h2 class="tour__title">
+            Explore<br>the <em>Space.</em>
+          </h2>
+          <span class="tour__title-rule" aria-hidden="true"></span>
+          <p class="tour__lede">
+            Walk through NOVA Loft<br>before completion.
+          </p>
+        </div>
+      </div>
+
+      <!-- ── RIGHT · 3D viewer + room tabs ───────────────────── -->
+      <div class="tour__viewer-col">
+        <div class="tour__viewer" data-tour-viewer>
+
+          <!-- iframe src is set by JS based on active room -->
+          <iframe class="tour__iframe"
+                  data-tour-iframe
+                  title="3D Virtual Tour of NOVA Loft"
+                  loading="lazy"
+                  allow="fullscreen; xr-spatial-tracking; gyroscope; accelerometer; clipboard-read; clipboard-write"
+                  allowfullscreen
+                  referrerpolicy="no-referrer"></iframe>
+
+          <!-- Click-to-enter overlay (fades out on first click) -->
+          <button type="button" class="tour__overlay" data-tour-enter data-cursor-hover aria-label="Enter the 3D tour">
+            <span class="tour__overlay-ring" aria-hidden="true">
+              <svg viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-width="2"/>
+                <path d="M44 38l16 12-16 12V38z" fill="currentColor" opacity="0.85"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <!-- ── Room tabs (scoped per type) ────────────────────── -->
+        <nav class="tour__room-tabs" aria-label="Choose room">
+
+          <!-- 27M² · 4 rooms -->
+          <button type="button" class="tour__room-tab" data-tour-type="27" data-tour-room="living"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/dbec16e8-c6b3-48be-925c-d279f7dc7bbb"
+                  data-cursor-hover>Living Area</button>
+          <button type="button" class="tour__room-tab" data-tour-type="27" data-tour-room="kitchen"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/0e9887ec-c29a-4adc-b0b5-8cd5c335567e"
+                  data-cursor-hover>Kitchen</button>
+          <button type="button" class="tour__room-tab" data-tour-type="27" data-tour-room="bedroom"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/0cbccdcf-ac03-4399-9dcf-6d87c5ee0da9"
+                  data-cursor-hover>Bedroom</button>
+          <button type="button" class="tour__room-tab" data-tour-type="27" data-tour-room="bathroom"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/1b386dfa-3c2b-44dd-acdf-790d019fd511"
+                  data-cursor-hover>Bathroom</button>
+
+          <!-- 35M² · 3 rooms -->
+          <button type="button" class="tour__room-tab" data-tour-type="35" data-tour-room="living"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/b9f52bd1-b713-473d-8aba-8872dd314435"
+                  data-cursor-hover>Living Area</button>
+          <button type="button" class="tour__room-tab" data-tour-type="35" data-tour-room="bedroom"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/7c025dd3-6c91-428c-90c7-ae600bbb338e"
+                  data-cursor-hover>Bedroom</button>
+          <button type="button" class="tour__room-tab" data-tour-type="35" data-tour-room="bathroom"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/20a58af3-c6b1-4a05-9155-e8fa69c2c7ad"
+                  data-cursor-hover>Bathroom</button>
+        </nav>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SCREEN 05 · FACILITIES · Amenities slider
+         Photo on the left swaps in/out per active facility; the
+         icon strip at the bottom is the selector. Themeable
+         via [data-theme] on body.
+         ═══════════════════════════════════════════════════════ -->
+    <section class="facilities" id="facilities" data-section="facilities" data-active-facility="gym">
+
+      <!-- Top meta (left) -->
+      <div class="facilities__meta">
+        <span class="facilities__meta-num">05</span>
+        <span class="facilities__meta-rule" aria-hidden="true"></span>
+        <span class="facilities__meta-label">Facilities</span>
+      </div>
+
+      <!-- Top header (right) -->
+      <div class="facilities__header">
+        <h2 class="facilities__title">Amenities for<br><em>island living.</em></h2>
+        <p class="facilities__lede">
+          Seven private amenities, woven into the rhythm of the building.
+        </p>
+      </div>
+
+      <!-- Photo column — stacked images, only the active one is visible -->
+      <div class="facilities__media">
+        <picture class="facilities__photo" aria-hidden="true">
+          <img class="facilities__photo-img" data-facility="pool"      src="images/amenities/pool.jpg"               alt="" decoding="async" loading="lazy">
+          <img class="facilities__photo-img" data-facility="gym"       src="images/amenities/gym.jpg" alt="" decoding="async" loading="lazy">
+          <img class="facilities__photo-img" data-facility="parking"   src="images/amenities/parking.jpg"          alt="" decoding="async" loading="lazy">
+          <img class="facilities__photo-img" data-facility="cafe"      src="images/amenities/cafe.jpg"  alt="" decoding="async" loading="lazy">
+          <img class="facilities__photo-img" data-facility="rooftop"   src="images/amenities/rooftop.jpg"            alt="" decoding="async" loading="lazy">
+          <img class="facilities__photo-img" data-facility="relax"     src="images/amenities/relaxing.jpg"           alt="" decoding="async" loading="lazy">
+          <img class="facilities__photo-img" data-facility="coworking" src="images/amenities/working.jpg"            alt="" decoding="async" loading="lazy">
+        </picture>
+        <div class="facilities__media-grade" aria-hidden="true"></div>
+      </div>
+
+      <!-- Active facility's name + description -->
+      <div class="facilities__panels">
+
+        <article class="facilities__panel" data-facility-panel="pool">
+          <span class="facilities__panel-num">01 — Pool</span>
+          <h3 class="facilities__panel-title">Swimming<br><em>Pool.</em></h3>
+          <p class="facilities__panel-desc">
+            Refreshing pool for relaxation or exercise, perfect for all ages.
+          </p>
+        </article>
+
+        <article class="facilities__panel" data-facility-panel="gym">
+          <span class="facilities__panel-num">02 — Gym</span>
+          <h3 class="facilities__panel-title">Fitness<br><em>Studio.</em></h3>
+          <p class="facilities__panel-desc">
+            Compact but functional gym area to keep you healthy and energized.
+          </p>
+        </article>
+
+        <article class="facilities__panel" data-facility-panel="parking">
+          <span class="facilities__panel-num">03 — Parking</span>
+          <h3 class="facilities__panel-title">Resident<br><em>Parking.</em></h3>
+          <p class="facilities__panel-desc">
+            Spacious and secure parking areas for residents and guests, ensuring easy and convenient access at all times.
+          </p>
+        </article>
+
+        <article class="facilities__panel" data-facility-panel="cafe">
+          <span class="facilities__panel-num">04 — Cafe</span>
+          <h3 class="facilities__panel-title">Cafe &amp;<br><em>Restaurant.</em></h3>
+          <p class="facilities__panel-desc">
+            On-site dining with a selection of cafés and restaurants — perfect for casual meetups or daily indulgence.
+          </p>
+        </article>
+
+        <article class="facilities__panel" data-facility-panel="rooftop">
+          <span class="facilities__panel-num">05 — Rooftop</span>
+          <h3 class="facilities__panel-title">Private<br><em>Rooftop.</em></h3>
+          <p class="facilities__panel-desc">
+            Each tower features a private rooftop with stunning ocean views — ideal to unwind, enjoy sunsets, or host intimate gatherings.
+          </p>
+        </article>
+
+        <article class="facilities__panel" data-facility-panel="relax">
+          <span class="facilities__panel-num">06 — Relaxation</span>
+          <h3 class="facilities__panel-title">Relaxation<br><em>Lounge.</em></h3>
+          <p class="facilities__panel-desc">
+            Thoughtfully designed spaces to slow down, recharge, and enjoy a peaceful moment — alone or with company.
+          </p>
+        </article>
+
+        <article class="facilities__panel" data-facility-panel="coworking">
+          <span class="facilities__panel-num">07 — Co-Working</span>
+          <h3 class="facilities__panel-title">Co-Working<br><em>Studio.</em></h3>
+          <p class="facilities__panel-desc">
+            Work from paradise. A quiet, well-designed space equipped with the essentials for productivity and focus.
+          </p>
+        </article>
+
+      </div>
+
+      <!-- Icon selector strip at the bottom -->
+      <nav class="facilities__icons" aria-label="Choose facility">
+
+        <button type="button" class="facilities__icon" data-facility-btn="pool" aria-label="Swimming Pool" data-cursor-hover>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 18c1.5 0 1.5-1 3-1s1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1"/>
+            <path d="M3 14c1.5 0 1.5-1 3-1s1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1"/>
+            <circle cx="9" cy="7" r="1.7"/>
+            <path d="M11 9l4-3"/>
+          </svg>
+        </button>
+
+        <button type="button" class="facilities__icon" data-facility-btn="gym" aria-label="Gym" data-cursor-hover>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 8v8M4 10v4M18 8v8M20 10v4"/>
+            <path d="M6 12h12"/>
+          </svg>
+        </button>
+
+        <button type="button" class="facilities__icon" data-facility-btn="parking" aria-label="Parking Lots" data-cursor-hover>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <path d="M10 17V8h3.5a2.5 2.5 0 0 1 0 5H10"/>
+          </svg>
+        </button>
+
+        <button type="button" class="facilities__icon" data-facility-btn="cafe" aria-label="Cafe & Restaurant" data-cursor-hover>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 9h12v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9z"/>
+            <path d="M17 11h2a2 2 0 1 1 0 4h-2"/>
+            <path d="M8 4v3M12 4v3M16 4v3"/>
+          </svg>
+        </button>
+
+        <button type="button" class="facilities__icon" data-facility-btn="rooftop" aria-label="Rooftop" data-cursor-hover>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21V11l5-3v13"/>
+            <path d="M8 21V13l6 2v6"/>
+            <path d="M14 21v-9l6 3v6"/>
+            <path d="M3 21h18"/>
+          </svg>
+        </button>
+
+        <button type="button" class="facilities__icon" data-facility-btn="relax" aria-label="Relaxation Area" data-cursor-hover>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21c-4-5-5-9-5-12a5 5 0 0 1 10 0c0 3-1 7-5 12z"/>
+            <path d="M12 11c-2 0-3-2-3-4M12 11c2 0 3-2 3-4M12 11v10"/>
+          </svg>
+        </button>
+
+        <button type="button" class="facilities__icon" data-facility-btn="coworking" aria-label="Co-Working Area" data-cursor-hover>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="7" width="18" height="13" rx="2"/>
+            <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/>
+            <path d="M3 13h18"/>
+          </svg>
+        </button>
+
+      </nav>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SCREEN 06 · SHARED SPACES · Common-areas 3D tour
+         Reuses .tour class — same styling, just different content.
+         Ten room buttons wrap to multiple rows naturally.
+         ═══════════════════════════════════════════════════════ -->
+    <section class="tour tour--common" id="common-tour" data-section="common-tour"
+             data-active-room="parking">
+
+      <!-- Top meta -->
+      <div class="tour__meta">
+        <span class="tour__meta-num">06</span>
+        <span class="tour__meta-rule" aria-hidden="true"></span>
+        <span class="tour__meta-label">Shared Spaces</span>
+      </div>
+
+      <!-- LEFT · title + lede -->
+      <div class="tour__info-col">
+        <div class="tour__info">
+          <h2 class="tour__title">
+            Beyond<br>your <em>loft.</em>
+          </h2>
+          <span class="tour__title-rule" aria-hidden="true"></span>
+          <p class="tour__lede">
+            Lobby, pool, rooftop —<br>your full experience.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT · 3D viewer + room tabs -->
+      <div class="tour__viewer-col">
+        <div class="tour__viewer" data-tour-viewer>
+
+          <iframe class="tour__iframe"
+                  data-tour-iframe
+                  title="3D Virtual Tour of NOVA Loft Common Areas"
+                  loading="lazy"
+                  allow="fullscreen; xr-spatial-tracking; gyroscope; accelerometer; clipboard-read; clipboard-write"
+                  allowfullscreen
+                  referrerpolicy="no-referrer"></iframe>
+
+          <button type="button" class="tour__overlay" data-tour-enter data-cursor-hover aria-label="Enter the 3D tour">
+            <span class="tour__overlay-ring" aria-hidden="true">
+              <svg viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-width="2"/>
+                <path d="M44 38l16 12-16 12V38z" fill="currentColor" opacity="0.85"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <!-- Room tabs · 10 buttons (wrap naturally) -->
+        <nav class="tour__room-tabs" aria-label="Choose area">
+          <button type="button" class="tour__room-tab" data-tour-room="parking"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/65fe1ce6-e957-496b-803c-5631e68a0e9b"
+                  data-cursor-hover>Parking Area</button>
+          <button type="button" class="tour__room-tab" data-tour-room="foyer"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/a373c5e7-2ad8-4ac9-941c-40b14ad084a2"
+                  data-cursor-hover>Lobby Foyer</button>
+          <button type="button" class="tour__room-tab" data-tour-room="lobby"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/c40bc6e4-dc06-4ad3-80e6-856bf1b543b7"
+                  data-cursor-hover>Front Lobby</button>
+          <button type="button" class="tour__room-tab" data-tour-room="coworking"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/1ee0c668-c14f-4884-b00b-d45b2cde1243"
+                  data-cursor-hover>Co-working Space</button>
+          <button type="button" class="tour__room-tab" data-tour-room="sunbed"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/10f68f98-a7d8-42c6-baa0-0a1aab22997e"
+                  data-cursor-hover>Sunbed Area</button>
+          <button type="button" class="tour__room-tab" data-tour-room="poolgym1"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/a73b1a14-59c2-490c-9f37-5869f8ff3436"
+                  data-cursor-hover>Pool &amp; Gym I</button>
+          <button type="button" class="tour__room-tab" data-tour-room="poolgym2"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/9e79a35b-0df9-45f7-8989-b1dac84b5228"
+                  data-cursor-hover>Pool &amp; Gym II</button>
+          <button type="button" class="tour__room-tab" data-tour-room="roofgym"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/7c3afe50-cfce-47ad-a200-7bf9f1816873"
+                  data-cursor-hover>Rooftop Gym</button>
+          <button type="button" class="tour__room-tab" data-tour-room="rooftop1"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/7f52cad5-8469-4bb5-ac83-84cca11cf186"
+                  data-cursor-hover>Rooftop View I</button>
+          <button type="button" class="tour__room-tab" data-tour-room="rooftop2"
+                  data-tour-url="https://api2.enscape3d.com/v3/view/fbcd8845-1560-467f-94ec-fa718627d2cd"
+                  data-cursor-hover>Rooftop View II</button>
+        </nav>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SCREEN 07 · MARKET CASE · Data-driven editorial brief
+         Hero stat + 3 supporting metrics + yield-by-market chart.
+         Themeable via [data-theme] on body.
+         ═══════════════════════════════════════════════════════ -->
+    <section class="market" id="market" data-section="market">
+
+      <!-- Background photo · cross-fades by [data-theme] (placeholders for now) -->
+      <picture class="market__bg" aria-hidden="true">
+        <img class="market__bg-img market__bg-img--night"
+             src="images/market/bg-night.jpg" alt=""
+             decoding="async" loading="lazy">
+        <img class="market__bg-img market__bg-img--day"
+             src="images/market/bg-day.jpg" alt=""
+             decoding="async" loading="lazy">
+      </picture>
+      <div class="market__bg-grade" aria-hidden="true"></div>
+
+      <!-- Header (left): meta + title + lede -->
+      <div class="market__header">
+        <div class="market__meta">
+          <span class="market__meta-num">07</span>
+          <span class="market__meta-rule" aria-hidden="true"></span>
+          <span class="market__meta-label">Market Case</span>
+        </div>
+        <h2 class="market__title">
+          Why this.<br><em>Why now.</em>
+        </h2>
+        <p class="market__lede">
+          Bali isn't a bet anymore. It's a yield asset with a decade of data behind it.
+        </p>
+      </div>
+
+      <!-- Hero stat (right) -->
+      <div class="market__hero">
+        <div class="market__hero-figure">
+          <span class="market__hero-number">6.95<em>M</em></span>
+        </div>
+        <span class="market__hero-label">Foreign Arrivals · 2025</span>
+        <p class="market__hero-caption">
+          An all-time high. Up from 6.3M in 2019 — the curve is still climbing.
+        </p>
+      </div>
+
+      <!-- Three supporting metrics -->
+      <div class="market__metrics">
+
+        <div class="market__metric" data-reveal data-reveal-delay="0">
+          <span class="market__metric-num">01</span>
+          <div class="market__metric-value">+13<em>%</em></div>
+          <div class="market__metric-label">Bukit Price Growth</div>
+          <div class="market__metric-sub">Last 12 months — fastest sub-market on the island</div>
+        </div>
+
+        <div class="market__metric market__metric--center" data-reveal data-reveal-delay="120">
+          <span class="market__metric-num">02</span>
+          <div class="market__metric-value">75<em>%+</em></div>
+          <div class="market__metric-label">Sustained Occupancy</div>
+          <div class="market__metric-sub">Across 7+ consecutive months of rental data</div>
+        </div>
+
+        <div class="market__metric" data-reveal data-reveal-delay="240">
+          <span class="market__metric-num">03</span>
+          <div class="market__metric-value">9–13<em>%</em></div>
+          <div class="market__metric-label">Gross Yield Range</div>
+          <div class="market__metric-sub">Higher than every regional alternative</div>
+        </div>
+
+      </div>
+
+      <!-- Yield-by-market bar chart -->
+      <div class="market__chart" data-market-chart>
+        <div class="market__chart-header">
+          <span class="market__chart-title">Gross Rental Yield · By Market</span>
+        </div>
+
+        <ul class="market__bars">
+
+          <li class="market__bar-row market__bar-row--highlight" style="--bar-target: 100%; --bar-delay: 0ms">
+            <span class="market__bar-name">Bali · Bukit</span>
+            <span class="market__bar-track">
+              <span class="market__bar-fill" aria-hidden="true"></span>
+            </span>
+            <span class="market__bar-value">13<em>%</em></span>
+          </li>
+
+          <li class="market__bar-row" style="--bar-target: 77%; --bar-delay: 140ms">
+            <span class="market__bar-name">Phuket</span>
+            <span class="market__bar-track">
+              <span class="market__bar-fill" aria-hidden="true"></span>
+            </span>
+            <span class="market__bar-value">10<em>%</em></span>
+          </li>
+
+          <li class="market__bar-row" style="--bar-target: 61%; --bar-delay: 280ms">
+            <span class="market__bar-name">Ho Chi Minh City</span>
+            <span class="market__bar-track">
+              <span class="market__bar-fill" aria-hidden="true"></span>
+            </span>
+            <span class="market__bar-value">8<em>%</em></span>
+          </li>
+
+          <li class="market__bar-row" style="--bar-target: 46%; --bar-delay: 420ms">
+            <span class="market__bar-name">Bangkok</span>
+            <span class="market__bar-track">
+              <span class="market__bar-fill" aria-hidden="true"></span>
+            </span>
+            <span class="market__bar-value">6<em>%</em></span>
+          </li>
+
+        </ul>
+
+        <p class="market__chart-foot">
+          Entry costs in Bukit run 30–50% lower than comparable Thai or Vietnamese resort markets.
+        </p>
+      </div>
+
+    </section>
+    <!-- ═══════════════════════════════════════════════════════
+         SCREEN 08 · CTA · Reserve your residence
+         Theme = light by default (driven by mode: morning/day/sunset),
+         flips to dark at night. Manual override via .theme-toggle.
+         ═══════════════════════════════════════════════════════ -->
+    <section class="cta" id="cta" data-section="cta">
+      <div class="cta__bg" aria-hidden="true">
+        <div class="cta__glow"></div>
+      </div>
+      <div class="cta__frame" aria-hidden="true">
+        <span class="cta__corner cta__corner--tl"></span>
+        <span class="cta__corner cta__corner--tr"></span>
+        <span class="cta__corner cta__corner--bl"></span>
+        <span class="cta__corner cta__corner--br"></span>
+      </div>
+      <div class="cta__container">
+        <span class="cta__pill" data-reveal>
+          <span class="cta__pill-dot" aria-hidden="true"></span>
+          From unfinished to unforgettable
+        </span>
+        <h2 class="cta__title" data-reveal data-reveal-delay="150">
+          Reserve your<br><em>residence.</em>
+        </h2>
+        <p class="cta__lede" data-reveal data-reveal-delay="300">
+          Only 48 loft residences. Limited availability. Begin your private consultation — and we'll send you a personal access link to the live build, weekly timelapse, and the detailed floorplate library.
+        </p>
+
+        <form class="cta__form" data-reveal data-reveal-delay="450" data-cta-form>
+          <div class="cta__form-row">
+            <label class="cta__field">
+              <span class="cta__field-label">Full name</span>
+              <input type="text" name="name" required autocomplete="name" data-cursor-hover>
+            </label>
+            <label class="cta__field">
+              <span class="cta__field-label">Email</span>
+              <input type="email" name="email" required autocomplete="email" data-cursor-hover>
+            </label>
+          </div>
+          <label class="cta__field">
+            <span class="cta__field-label">Message <span class="cta__field-optional">(optional)</span></span>
+            <textarea name="message" rows="3" data-cursor-hover></textarea>
+          </label>
+          <div class="cta__form-actions">
+            <button type="submit" class="cta__submit" data-cursor-hover>
+              <span class="cta__submit-text">Begin Conversation</span>
+              <span class="cta__submit-arrow" aria-hidden="true">→</span>
+            </button>
+            <span class="cta__form-note">We reply within 24 hours.</span>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Mobile menu toggle — hamburger ↔ X (only visible on small screens) -->
+  <button type="button" class="section-nav__toggle" data-section-nav-toggle
+          aria-label="Open section menu" aria-expanded="false" data-cursor-hover>
+    <span class="section-nav__toggle-bars" aria-hidden="true">
+      <span class="section-nav__toggle-bar"></span>
+      <span class="section-nav__toggle-bar"></span>
+      <span class="section-nav__toggle-bar"></span>
+    </span>
+  </button>
+
+  <!-- Right-side section indicator — fixed, vertically centered.
+       Numbers 01-08 stacked; hovering or scrolling highlights the
+       current section. Click → smooth scroll. On phones it switches
+       to a fullscreen overlay opened by the toggle above. -->
+  <nav class="section-nav" aria-label="Sections" data-section-nav>
+    <ul class="section-nav__list">
+      <li class="section-nav__item">
+        <a class="section-nav__link" href="#hero" data-section-link="hero" data-cursor-hover>
+          <span class="section-nav__label">Atmosphere</span>
+          <span class="section-nav__num">01</span>
+          <span class="section-nav__line" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li class="section-nav__item">
+        <a class="section-nav__link" href="#reality" data-section-link="reality" data-cursor-hover>
+          <span class="section-nav__label">Reality</span>
+          <span class="section-nav__num">02</span>
+          <span class="section-nav__line" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li class="section-nav__item">
+        <a class="section-nav__link" href="#apartments" data-section-link="apartments" data-cursor-hover>
+          <span class="section-nav__label">Apartments</span>
+          <span class="section-nav__num">03</span>
+          <span class="section-nav__line" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li class="section-nav__item">
+        <a class="section-nav__link" href="#tour" data-section-link="tour" data-cursor-hover>
+          <span class="section-nav__label">Apartment Tour</span>
+          <span class="section-nav__num">04</span>
+          <span class="section-nav__line" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li class="section-nav__item">
+        <a class="section-nav__link" href="#facilities" data-section-link="facilities" data-cursor-hover>
+          <span class="section-nav__label">Facilities</span>
+          <span class="section-nav__num">05</span>
+          <span class="section-nav__line" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li class="section-nav__item">
+        <a class="section-nav__link" href="#common-tour" data-section-link="common-tour" data-cursor-hover>
+          <span class="section-nav__label">Shared Spaces</span>
+          <span class="section-nav__num">06</span>
+          <span class="section-nav__line" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li class="section-nav__item">
+        <a class="section-nav__link" href="#market" data-section-link="market" data-cursor-hover>
+          <span class="section-nav__label">Market Case</span>
+          <span class="section-nav__num">07</span>
+          <span class="section-nav__line" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li class="section-nav__item">
+        <a class="section-nav__link" href="#cta" data-section-link="cta" data-cursor-hover>
+          <span class="section-nav__label">Reserve</span>
+          <span class="section-nav__num">08</span>
+          <span class="section-nav__line" aria-hidden="true"></span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Theme toggle — appears once the user scrolls past reality.
+       Lets them flip between dark / light on the lower sections. -->
+  <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle dark / light theme" data-cursor-hover>
+    <span class="theme-toggle__track" aria-hidden="true">
+      <span class="theme-toggle__icon theme-toggle__icon--sun">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="theme-toggle__icon theme-toggle__icon--moon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </span>
+  </button>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="footer" data-section="footer">
+    <div class="footer__container">
+
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__mark">NOVA <span class="footer__accent">LOFT</span></span>
+          <p class="footer__tagline">
+            Loft Residences.<br />
+            Built in public.
+          </p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer">
+          <div class="footer__col footer__col--location">
+            <h4 class="footer__col-title">Location</h4>
+            <ul>
+              <li><span class="footer__location-place">Jl. Ungasan</span></li>
+              <li><span class="footer__location-place">Bukit Peninsula, Bali</span></li>
+              <li><span class="footer__location-coords">06°50′S · 115°09′E</span></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__col-title">Project</h4>
+            <ul>
+              <li><a href="#hero" data-cursor-hover>Atmosphere</a></li>
+              <li><a href="#reality" data-cursor-hover>Reality</a></li>
+              <li><a href="#apartments" data-cursor-hover>Apartments</a></li>
+              <li><a href="#facilities" data-cursor-hover>Facilities</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__col-title">Contact</h4>
+            <ul>
+              <li><a href="mailto:hello@nova-bali.com" data-cursor-hover>hello@nova-bali.com</a></li>
+              <li><a href="tel:+6281234567890" data-cursor-hover>+62 812 3456 7890</a></li>
+              <li><a href="#cta" data-cursor-hover>Reserve a residence</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 NOVA LOFT · All rights reserved</span>
+        <div class="footer__legal">
+          <a href="#" data-cursor-hover>Privacy</a>
+          <a href="#" data-cursor-hover>Legal</a>
+        </div>
+      </div>
+
+      <!-- Massive wordmark with an overlay link to the dedicated /location/ page -->
+      <div class="footer__massive-wrap">
+        <div class="footer__massive" aria-hidden="true">NOVA LOFT</div>
+        <a href="/location/" class="footer__locate" data-cursor-hover>
+          <span class="footer__locate-eyebrow">The Place</span>
+          <span class="footer__locate-label">More about Ungasan</span>
+          <span class="footer__locate-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       ACCESS MODAL
+       Triggered by .reality__cta. Always-visible close button (×).
+       Any submission resolves to "Access denied".
+       ═══════════════════════════════════════════════════════ -->
+  <div class="access-modal" data-access-modal aria-hidden="true">
+    <div class="access-modal__backdrop" data-access-close aria-hidden="true"></div>
+    <div class="access-modal__panel" role="dialog" aria-modal="true" aria-labelledby="access-title">
+
+      <button type="button" class="access-modal__close" data-access-close aria-label="Close" data-cursor-hover>
+        <span class="access-modal__close-x" aria-hidden="true">
+          <span></span><span></span>
+        </span>
+      </button>
+
+      <div class="access-modal__head">
+        <span class="access-modal__eyebrow">Restricted</span>
+        <h2 class="access-modal__title" id="access-title">Enter <em>Private Access</em></h2>
+        <p class="access-modal__lede">Enter the passport number associated with your reservation agreement.</p>
+      </div>
+
+      <form class="access-modal__form" data-access-form novalidate>
+        <label class="access-modal__field">
+          <span class="access-modal__label">Passport Number</span>
+          <input
+            type="text"
+            class="access-modal__input"
+            data-access-input
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="e.g. AA1234567"
+          >
+        </label>
+
+        <div class="access-modal__error" data-access-error aria-live="polite" aria-hidden="true">
+          <span class="access-modal__error-dot" aria-hidden="true"></span>
+          <span class="access-modal__error-text">Access denied — no matching reservation</span>
+        </div>
+
+        <button type="submit" class="access-modal__submit" data-cursor-hover>
+          <span class="access-modal__submit-text">Access Live Feed</span>
+          <span class="access-modal__submit-arrow" aria-hidden="true">→</span>
+        </button>
+      </form>
+
+      <p class="access-modal__footnote">
+        Don't have a reservation?
+        <a href="#cta" class="access-modal__footnote-link" data-access-jump data-cursor-hover>Request a viewing</a>
+      </p>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════════════════ -->
+  <script src="js/preloader.js" defer></script>
+  <script src="js/cursor.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/reveal.js" defer></script>
+  <script src="js/parallax.js" defer></script>
+  <script src="js/live.js" defer></script>
+  <script src="js/hero.js" defer></script>
+  <script src="js/reality.js" defer></script>
+  <script src="js/apartments.js" defer></script>
+  <script src="js/tour.js" defer></script>
+  <script src="js/facilities.js" defer></script>
+  <script src="js/market.js" defer></script>
+  <script src="js/section-nav.js" defer></script>
+  <script src="js/access.js" defer></script>
+  <script src="js/theme.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

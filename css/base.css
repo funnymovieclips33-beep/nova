@@ -1,0 +1,225 @@
+/* ===================================================================
+   NOVA · base.css
+   Design tokens, reset, typography foundation
+   =================================================================== */
+
+:root {
+  /* ─── Color palette ─────────────────────────────────────────────── */
+  --color-graphite:     #0A0908;
+  --color-charcoal:     #14110F;
+  --color-ink:          #1A1816;
+  --color-stone:        #2A2724;
+  --color-gold:         #C9A96E;
+  --color-gold-soft:    rgba(201, 169, 110, 0.5);
+  --color-gold-faint:   rgba(201, 169, 110, 0.12);
+  --color-bone:         #EEE8DC;
+  --color-bone-soft:    rgba(238, 232, 220, 0.6);
+  --color-bone-mute:    rgba(238, 232, 220, 0.4);
+  --color-bone-faint:   rgba(238, 232, 220, 0.15);
+  --color-bone-trace:   rgba(238, 232, 220, 0.06);
+  --color-concrete:     #8A8880;
+  --color-warm-light:   #F5EFE3;
+
+  /* ─── Semantic surface tokens ───────────────────────────────────── */
+  --surface-primary:    var(--color-graphite);
+  --surface-secondary:  var(--color-charcoal);
+  --surface-tertiary:   var(--color-ink);
+  --surface-light:      var(--color-warm-light);
+  --surface-accent:     var(--color-gold);
+
+  --text-primary:       var(--color-bone);
+  --text-secondary:     var(--color-bone-soft);
+  --text-muted:         var(--color-bone-mute);
+  --text-accent:        var(--color-gold);
+  --text-inverse:       var(--color-graphite);
+
+  --border-faint:       var(--color-bone-trace);
+  --border-soft:        var(--color-bone-faint);
+  --border-gold:        var(--color-gold-faint);
+
+  /* ─── Typography ────────────────────────────────────────────────── */
+  --font-display:       'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body:          'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:          'Share Tech Mono', 'SF Mono', Menlo, monospace;
+
+  --fs-eyebrow:         clamp(0.6rem, 0.65vw, 0.7rem);
+  --fs-mono:            clamp(0.62rem, 0.7vw, 0.72rem);
+  --fs-body:            clamp(0.95rem, 1vw, 1.05rem);
+  --fs-lede:            clamp(1.05rem, 1.2vw, 1.25rem);
+  --fs-h3:              clamp(1.75rem, 3vw, 2.75rem);
+  --fs-h2:              clamp(2.5rem, 5vw, 5rem);
+  --fs-h1:              clamp(3rem, 7.5vw, 8rem);
+  --fs-display:         clamp(4rem, 12vw, 14rem);
+
+  --ls-tight:           -0.025em;
+  --ls-snug:            -0.015em;
+  --ls-normal:          0;
+  --ls-wide:            0.05em;
+  --ls-wider:           0.15em;
+  --ls-widest:          0.28em;
+
+  --lh-tight:           0.95;
+  --lh-snug:            1.1;
+  --lh-normal:          1.5;
+  --lh-relaxed:         1.7;
+
+  /* ─── Spacing scale ─────────────────────────────────────────────── */
+  --space-1:            4px;
+  --space-2:            8px;
+  --space-3:            12px;
+  --space-4:            16px;
+  --space-5:            24px;
+  --space-6:            32px;
+  --space-7:            48px;
+  --space-8:            64px;
+  --space-9:            96px;
+  --space-10:           128px;
+  --space-11:           160px;
+  --space-12:           192px;
+
+  /* ─── Container / layout ────────────────────────────────────────── */
+  --container-max:      1680px;
+  --container-padding:  clamp(24px, 4vw, 64px);
+  --section-spacing:    clamp(120px, 14vh, 200px);
+
+  /* ─── Motion ────────────────────────────────────────────────────── */
+  --ease-out-expo:      cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart:     cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-quart:  cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-luxury:        cubic-bezier(0.65, 0, 0.35, 1);
+
+  --dur-fast:           240ms;
+  --dur-base:           500ms;
+  --dur-slow:           900ms;
+  --dur-cinematic:      1400ms;
+
+  /* ─── Layer order ───────────────────────────────────────────────── */
+  --z-base:             1;
+  --z-content:          10;
+  --z-grain:            50;
+  --z-progress:         90;
+  --z-header:           100;
+  --z-mobile-menu:      150;
+  --z-cursor:           9999;
+}
+
+/* ─── Reset ───────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* Cinematic scroll: each scene snaps into the viewport on release. */
+  scroll-snap-type: y mandatory;
+}
+
+/* Snap-aligned scenes. Footer is now one of them — full-screen finale. */
+.hero,
+.reality,
+.apartments,
+.tour,
+.facilities,
+.market,
+.cta,
+.footer {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-normal);
+  color: var(--text-primary);
+  background-color: var(--surface-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  line-height: var(--lh-snug);
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-graphite);
+}
+
+/* ─── Hide default cursor on devices that have a fine pointer ─── */
+@media (hover: hover) and (pointer: fine) {
+  body.has-custom-cursor,
+  body.has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+/* ─── Grain overlay ───────────────────────────────────────────────── */
+.nova-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--z-grain);
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
