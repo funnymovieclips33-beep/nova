@@ -63,7 +63,11 @@
        below (CTA, footer). ─────────────────────────────────────────── */
   const firstLowerSection = document.querySelector('.apartments')
     || document.querySelector('.cta');
-  if (toggle && firstLowerSection) {
+  /* Pages that opt in via `data-theme-toggle-always` (e.g. /location/)
+     skip the observer and just show the toggle from the start. */
+  if (toggle && document.body.hasAttribute('data-theme-toggle-always')) {
+    toggle.classList.add('is-visible');
+  } else if (toggle && firstLowerSection) {
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
